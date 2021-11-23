@@ -15,6 +15,8 @@ type Props = {
     firstButtonText: string;
     /**defines the text of the second (right or bottom) button. */
     secondButtonText?: string;
+    /**boolean variable which allows you to specific if that section is the first to show. */
+    isFirst?: boolean;
     /**boolean variable which allows you to specific if that section is the last to show. */
     isLast?: boolean;
 }
@@ -41,7 +43,7 @@ function Section(props: Props): JSX.Element {
                         {props.secondButtonText && <SecondButton href="#">{props.secondButtonText}</SecondButton>}
                     </Fade>
                 </ButtonGroup>
-                {!props.isLast && <DownArrow src="assets/images/arrow.svg"/>}
+                {props.isFirst && <DownArrow src="assets/images/arrow.svg"/>}
             </Bottom>
         </Wrap>
     );
@@ -92,9 +94,10 @@ const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 4vh;
+  padding-bottom: 6vh;
   @media (max-width: 768px) {
     flex-direction: column;
+    padding-bottom: 4vh;
   }
 `;
 
@@ -116,18 +119,19 @@ const FirstButton = styled.a`
   letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;
+  opacity: 0.85;
   @media (max-width: 768px) {
     width: 360px;
   }
 `;
 
 const SecondButton = styled(FirstButton)`
-  background-color: #d2d1d4;
+  background-color: #eaeaea;
   color: #323338;
 `;
 
 const DownArrow = styled.img`
-  margin-bottom: 20px;
+  margin-bottom: 38px;
   width: 24px;
   overflow: hidden;
   animation: animateDown infinite 1.5s;
