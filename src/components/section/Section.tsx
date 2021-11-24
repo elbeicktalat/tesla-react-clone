@@ -9,6 +9,8 @@ type Props = {
     title: string;
     /**defines the subtitle (description) of a section */
     subTitle?: string;
+    subTitleLinkText?: string;
+    subTitleLinkDirection?: string;
     /**defines the background image of a section based on local assets. */
     backgroundUrl: string;
     /**defines the text of the first (left or top) button. */
@@ -31,7 +33,11 @@ function Section(props: Props): JSX.Element {
             <Fade bottom>
                 <TextItem>
                     <Title className="model-title">{props.title}</Title>
-                    {props.subTitle && <SubTitle>{props.subTitle}</SubTitle>}
+                    {props.subTitle &&
+                    <SubTitle>
+                        {props.subTitle}
+                        <a className="link" href={props.subTitleLinkDirection}>{props.subTitleLinkText}</a>
+                    </SubTitle>}
                 </TextItem>
             </Fade>
             <Bottom>
