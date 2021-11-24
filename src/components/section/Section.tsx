@@ -35,7 +35,7 @@ function Section(props: Props): JSX.Element {
                     <Title className="model-title">{props.title}</Title>
                     {props.subTitle &&
                     <SubTitle>
-                        {props.subTitle}
+                        {props.subTitle + " "}
                         <a className="link" href={props.subTitleLinkDirection}>{props.subTitleLinkText}</a>
                     </SubTitle>}
                 </TextItem>
