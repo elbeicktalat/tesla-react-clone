@@ -1,9 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Header.css"
 import styled from "styled-components";
-import {Button} from "@mui/material";
+import {Box, Button, Drawer, IconButton, ListItem, ListItemIcon, ListItemText} from "@mui/material";
+import {Close, Language} from "@mui/icons-material";
 
 function Header(): JSX.Element {
+
+    const [isOpen, setIsOpen] = useState(false);
+    const openMenu = () => setIsOpen(true);
+    const closeMenu = () => setIsOpen(false);
+    const listText = [
+        "Existing Inventory",
+        "Used Inventory",
+        "Trade-In",
+        "Test Drive",
+        "Cybertruck",
+        "Roadster",
+        "Semi",
+        "Charging",
+        "Powerwall",
+        "Commercial Energy",
+        "Utilities",
+        "Find Us",
+        "Support",
+        "Investor Relations",
+    ];
     return (
         <Container>
             <Logo>
@@ -24,8 +45,53 @@ function Header(): JSX.Element {
                     <Button href="#">Shop</Button>
                     <Button href="#">Account</Button>
                 </SecondaryMenu>
-                <SideMenu><Button href="#">Menu</Button></SideMenu>
+                <SideMenu><Button href="#" onClick={openMenu}>Menu</Button></SideMenu>
             </SecondaryMenuGroup>
+            <React.Fragment>
+                <Drawer
+                    className="drawer"
+                    anchor={"right"}
+                    open={isOpen}
+                    onClose={closeMenu}
+                >
+                    <CloseMenu>
+                        <IconButton onClick={closeMenu}>
+                            <Close/>
+                        </IconButton>
+                    </CloseMenu>
+                    <Box
+                        sx={{
+                            width: '294px',
+                            padding: '0 32px',
+                            marginBottom: '200px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                        className="box"
+                        role="presentation">
+                        {listText.map((text: string) => (
+                            <ListItem
+                                key={text}
+                                button
+                                className="list-item">
+                                <ListItemText primary={text}/>
+                            </ListItem>
+                        ))}
+                        <ListItem button className="list-item">
+                            <LangItem>
+                                <ListItemIcon>
+                                    <Language/>
+                                </ListItemIcon>
+                                <LangItemText>
+                                    <ListItemText id="lang-item-text-country" primary="United States"/>
+                                    <ListItemText id="lang-item-text-lang" primary="English"/>
+                                </LangItemText>
+                            </LangItem>
+                        </ListItem>
+                    </Box>
+                </Drawer>
+            </React.Fragment>
         </Container>
     );
 }
@@ -82,5 +148,23 @@ const SecondaryMenu = styled(MainMenu)``;
 const SideMenu = styled(MainMenu)`
   display: inline;
 `;
+
+const CloseMenu = styled.div`
+  display: flex;
+  justify-content: end;
+  padding: 18px;
+`;
+
+const LangItem = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+`;
+
+const LangItemText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 
 export default Header;

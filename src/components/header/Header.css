@@ -1,0 +1,26 @@
+.drawer {
+    backdrop-filter: blur(4px);
+}
+
+.drawer .box .list-item {
+    border-radius: 12px;
+    padding: 2px 12px;
+    margin: 4px 0;
+}
+
+.drawer .box .list-item span {
+    font-size: 14px;
+    font-family: GothamBook, sans-serif;
+    font-weight: 600;
+}
+
+#lang-item-text-country span {
+    font-size: 14px;
+    font-family: GothamBook, sans-serif;
+    font-weight: 600;
+}
+
+#lang-item-text-lang span {
+    font-size: 12px;
+    font-family: GothamBook, sans-serif;
+}
