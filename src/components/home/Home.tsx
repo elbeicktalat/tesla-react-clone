@@ -64,6 +64,10 @@ function Home(): JSX.Element {
 
 const Container = styled.div`
   height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 `;
 
 export default Home;

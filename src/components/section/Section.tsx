@@ -65,6 +65,7 @@ const Wrap = styled.div<ThemedStyleProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scroll-snap-align: center;
 `;
 
 const TextItem = styled.div`
