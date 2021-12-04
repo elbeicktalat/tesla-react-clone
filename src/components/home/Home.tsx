@@ -6,15 +6,15 @@ import Section from "../section/Section";
 function Home(): JSX.Element {
     return (
         <Container className="Home">
-                <Section
-                    title="Model S"
-                    subTitle="Order Online for"
-                    subTitleLinkText="Touchless Delivery"
-                    backgroundUrl="model-s.jpg"
-                    firstButtonText="custom order"
-                    secondButtonText="Existing inventory"
-                    isFirst
-                />
+            <Section
+                title="Model S"
+                subTitle="Order Online for"
+                subTitleLinkText="Touchless Delivery"
+                backgroundUrl="model-s.jpg"
+                firstButtonText="custom order"
+                secondButtonText="Existing inventory"
+                isFirst
+            />
             <Section
                 title="Model Y"
                 subTitle="Order Online for"
@@ -46,18 +46,18 @@ function Home(): JSX.Element {
                 firstButtonText="Order now"
                 secondButtonText="Learn more"
                 />
-                <Section
-                    title="Solar Roof"
-                    subTitle="Produce Clean Energy From Your Roof"
-                    backgroundUrl="solar-roof.jpg"
-                    firstButtonText="Order now"
-                    secondButtonText="Learn more"
-                />
-                <Section
-                    title="Accessories"
-                    backgroundUrl="accessories.jpg"
-                    firstButtonText="Shop now"
-                />
+            <Section
+                title="Solar Roof"
+                subTitle="Produce Clean Energy From Your Roof"
+                backgroundUrl="solar-roof.jpg"
+                firstButtonText="Order now"
+                secondButtonText="Learn more"
+            />
+            <Section
+                title="Accessories"
+                backgroundUrl="accessories.jpg"
+                firstButtonText="Shop now"
+            />
         </Container>
     );
 }
