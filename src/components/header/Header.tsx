@@ -127,8 +127,8 @@ const MainMenu = styled.div`
 
 
     &:hover {
-      background: #becddb;
-
+      background: hsla(0,0%,0%,.05);
+      backdrop-filter: blur(16px);
     }
 
   }
