@@ -44,7 +44,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -52,12 +52,12 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color:#babac0;
+    background-color:#bdbdbc;
     border-radius: 18px;
-    border: 3px solid #fff
+    border: 2px solid #fff;
+    height: 224px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color:#a0a0a5;
-    border: 2px solid #f4f4f4
+    background-color:#727473;
 }
