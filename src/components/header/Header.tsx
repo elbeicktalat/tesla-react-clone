@@ -119,7 +119,7 @@ const MainMenu = styled.div`
   a {
     font-family: GothamBook, sans-serif;
     font-weight: 600;
-    color: #393c41;
+    color: #181b21;
     text-transform: none;
     font-size: 14px;
     border-radius: 12px;

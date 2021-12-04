@@ -68,9 +68,8 @@ const Wrap = styled.div<ThemedStyleProps>`
 `;
 
 const TextItem = styled.div`
-  padding-top: 12vh;
+  padding-top: 16vh;
   text-align: center;
-
 `;
 
 const Title = styled.h1`
@@ -103,12 +102,11 @@ const ButtonGroup = styled.div`
   padding-bottom: 6vh;
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-bottom: 4vh;
   }
 `;
 
 const FirstButton = styled.a`
-  background-color: #323338;
+  background-color: #171a20;
   color: white;
   width: 256px;
   height: 40px;
@@ -121,7 +119,7 @@ const FirstButton = styled.a`
   font-family: GothamBook, sans-serif;
   font-weight: bold;
   padding: 12px 24px;
-  margin: 12px;
+  margin: 8px;
   letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;
@@ -133,11 +131,11 @@ const FirstButton = styled.a`
 
 const SecondButton = styled(FirstButton)`
   background-color: #eaeaea;
-  color: #323338;
+  color: #171a20;
 `;
 
 const DownArrow = styled.img`
-  margin-bottom: 38px;
+  margin-bottom: 18px;
   width: 24px;
   overflow: hidden;
   animation: animateDown infinite 1.5s;
