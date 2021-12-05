@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React Tesla Clone
+A simple Tesla website clone using React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Used Library
+- Styled component
+- Materia ui
+- React-reveal
 
 ## Available Scripts
 
