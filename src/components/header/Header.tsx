@@ -45,7 +45,7 @@ function Header(): JSX.Element {
                     <Button href="#">Shop</Button>
                     <Button href="#">Account</Button>
                 </SecondaryMenu>
-                <SideMenu><Button href="#" onClick={openMenu}>Menu</Button></SideMenu>
+                <SideMenu><Button onClick={openMenu}>Menu</Button></SideMenu>
             </SecondaryMenuGroup>
             <React.Fragment>
                 <Drawer
@@ -145,8 +145,25 @@ const SecondaryMenuGroup = styled.div`
 
 const SecondaryMenu = styled(MainMenu)``;
 
-const SideMenu = styled(MainMenu)`
+const SideMenu = styled.div`
   display: inline;
+  
+  button {
+    font-family: GothamBook, sans-serif;
+    font-weight: 600;
+    color: #181b21;
+    text-transform: none;
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 4px 12px;
+
+
+    &:hover {
+      background: hsla(0,0%,0%,.05);
+      backdrop-filter: blur(16px);
+    }
+
+  }
 `;
 
 const CloseMenu = styled.div`
