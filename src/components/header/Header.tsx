@@ -133,7 +133,7 @@ const MainMenu = styled.div`
 
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 823px) {
     display: none;
   }
 

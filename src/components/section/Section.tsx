@@ -101,7 +101,7 @@ const ButtonGroup = styled.div`
   flex-direction: row;
   justify-content: center;
   padding-bottom: 6vh;
-  @media (max-width: 768px) {
+  @media (max-width: 823px) {
     flex-direction: column;
   }
 `;
@@ -125,7 +125,7 @@ const FirstButton = styled.a`
   cursor: pointer;
   text-decoration: none;
   opacity: 0.85;
-  @media (max-width: 768px) {
+  @media (max-width: 823px) {
     width: 360px;
   }
 `;
